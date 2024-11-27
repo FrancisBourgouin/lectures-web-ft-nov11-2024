@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>User authentication & Cookies !</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+  <body>
+    <section>
+      <h1>
+        <span>Super secret thief creation page !</span>
+      </h1>
+    </section>
+
+    <section>
+				<form action="/thieves" method="POST">
+          <% if(error){ %>
+            <p style="border:0.5em solid red; color:red; padding:1em">
+              <%= error %>
+            </p>
+          <% } %>
+					<input type="email" name="email" placeholder="Enter your email" />
+					<input type="text" name="name" placeholder="Enter your name" />
+					<input type="text" name="imagePath" placeholder="Enter your imagePath" />
+					<input type="password" name="password" placeholder="Enter your password" />
+					<button>Create your vault!</button>
+				</form>
+    </section>
+  </body>
+</html>

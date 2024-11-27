@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>User authentication & Cookies !</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+  <body>
+    <section>
+      <h1>
+        <span>Super secret thief page !</span>
+      </h1>
+      <% if(thief){ %>
+      	<h2>Hi <%= thief.name %></h2>
+      <% } %>
+    </section>
+
+    <section>
+      <main>
+        <div class="door"></div>
+				<% if(thief){ %>
+					<img src="<%= thief.imagePath %>"
+				<% } %>
+      </main>
+    </section>
+    <section>
+			<% if(thief){ %>
+				<form action="/logout" method="POST">
+					<button>Close the vault</button>
+				</form>
+			<% } else { %>
+				<form action="/login" method="POST">
+					<input type="email" name="email" placeholder="Enter your email" />
+					<input type="password" name="password" placeholder="Enter your password" />
+					<button>Check your vault!</button>
+				</form>
+				<a href="/thieves/new">Or create a new thief!</a>
+			<% } %>
+    </section>
+  </body>
+</html>
