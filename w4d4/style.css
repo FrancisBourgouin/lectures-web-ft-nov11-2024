@@ -1,0 +1,28 @@
+body {
+  font-size: 30px;
+}
+
+header {
+  background-color: #b4d;
+  color: white;
+  padding: 1em;
+}
+
+p {
+  max-width: 80ch;
+}
+p span {
+  background-color: #c0ffee;
+}
+
+button {
+  font-size: 1em;
+  padding: 0.25em 0.5em;
+  background-color: #b4d;
+  color: white;
+  border-color: #c0ffee;
+  border-width: 1em;
+  border-style: solid;
+}
+
+/*# sourceMappingURL=style.css.map */

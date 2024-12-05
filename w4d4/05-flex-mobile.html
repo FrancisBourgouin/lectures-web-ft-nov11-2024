@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body{
+        background-color: #c0ffee;
+      }
+
+      section {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      /* min-width: Starting from the width, apply the rule */
+      @media screen and (min-width:800px) {
+        section{
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media screen and (min-width:1200px) {
+        section{
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+
+      @media print {
+        body{
+          background-color: white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <article>
+        <img src="images/20220131174506_1.jpg" alt="" />
+        <p>An image!</p>
+      </article>
+      <article>
+        <img src="images/20220131221341_1.jpg" alt="" />
+        <p>An image!</p>
+      </article>
+      <article>
+        <img src="images/20220201000857_1.jpg" alt="" />
+        <p>An image!</p>
+      </article>
+      <article>
+        <img src="images/20220202213814_1.jpg" alt="" />
+        <p>An image!</p>
+      </article>
+    </section>
+  </body>
+</html>

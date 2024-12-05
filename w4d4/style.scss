@@ -1,0 +1,32 @@
+$primary-background: #b0b;
+$primary-color: white;
+// $primary-background: #bada55;
+// $primary-color: rgb(87, 12, 206);
+
+body {
+  font-size: 30px;
+}
+
+header {
+  background-color: $primary-background;
+  color: $primary-color;
+  padding: 1em;
+}
+
+p {
+  max-width: 80ch;
+
+  span {
+    background-color: #c0ffee;
+  }
+}
+
+button {
+  font-size: 1em;
+  padding: 0.25em 0.5em;
+  background-color: $primary-background;
+  color: $primary-color;
+  border-color: #c0ffee;
+  border-width: 1em;
+  border-style: solid;
+}
