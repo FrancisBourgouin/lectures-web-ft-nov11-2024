@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todos</title>
+</head>
+<body>
+  <header>
+    <h1>Super cool todos!</h1>
+  </header>
+  <main>
+    <ul>
+     <% for (const todo of todos){ %>
+        <li>
+          <h1><%= todo.name %></h1>
+          <% if (todo.isCompleted){ %>
+            <button>Mark as incomplete</button>
+            <button>Delete</button>
+          <% } else { %>
+            <button>Mark as complete</button>
+          <% } %>
+        </li>
+      <% } %>
+    </ul>
+  </main>
+</body>
+</html>

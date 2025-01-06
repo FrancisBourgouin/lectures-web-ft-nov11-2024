@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Todos!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./data.js"></script>
+    <script>
+      $(document).ready(() => {
+        const createTodoElement = (todo) => {
+          let buttons = ``;
+
+          if (todo.isCompleted) {
+            buttons = `
+            <button>Mark as incomplete</button>
+            <button>Delete</button>
+          `;
+          } else {
+            buttons = `
+            <button>Mark as complete</button>
+          `;
+          }
+
+          const todoElement = `
+        <li id=${todo.id} isCompleted=${todo.isCompleted}>
+          <h1>${todo.name}</h1>
+          ${buttons}
+        </li>
+        `;
+
+          return todoElement;
+        };
+
+        const renderTodos = (todos) => {
+          for (const todo of todos) {
+            const todoElement = createTodoElement(todo);
+            $("ul").append(todoElement);
+          }
+        };
+
+        renderTodos(todos)
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Super cool todos!</h1>
+    </header>
+    <main>
+      <ul></ul>
+    </main>
+  </body>
+</html>
