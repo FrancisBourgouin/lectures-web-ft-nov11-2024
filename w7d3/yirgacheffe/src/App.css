@@ -1,0 +1,83 @@
+body,html{
+  margin:0;
+  padding:0;
+}
+
+.Header{
+  background-color: #bada55;
+  padding:1.5em;
+  text-align: center;
+  color:black;
+}
+
+.Question header{
+  background-color: #b0b;
+  font-size:0.75em;
+  text-align: center;
+
+  div, h1{
+    max-width: 600px;
+    margin:0 auto;
+  }
+}
+
+.UserProfile{
+  display: flex;
+  margin:1em;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:1em;
+
+  img{
+    width:5em;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+}
+.ReplyList{
+  max-width:800px;
+  margin:0 auto;
+}
+
+.ReplyListItem{
+  display:grid;
+  grid-template-columns: 5em auto;
+  grid-template-rows: auto auto;
+  gap:1em;
+  padding:1em;
+
+  grid-template-areas: 
+  "profile reply"
+  "profile vote";
+
+  div.UserProfile{
+    grid-area:profile;
+  }
+  p{
+    grid-area:reply;
+  }
+  div{
+    grid-area:vote;
+    text-align: right;
+  }
+}
+
+.ReplyListItem:nth-of-type(2n){
+  background:white;
+  color:black;
+}
+
+.ReplyForm{
+  background-color: #c0ffee;;
+  max-width:800px;
+  margin:1em auto;
+  display: flex;
+  flex-direction: column;
+  gap:1em;
+
+  input,button{
+    font-size:1em;
+    
+  }
+}
