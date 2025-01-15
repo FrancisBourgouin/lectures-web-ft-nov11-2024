@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --main-font: "Roboto", serif; 
+  --text: #fad3e1;
+  --background: #0e0206;
+  --primary: #ef79a8;
+  --secondary: #9a2a13;
+  --accent: #e7753e;
+}
+
+
+body,html{
+  font-family: var(--main-font);
+  background-color: var(--background);
+  color:var(--text);
+  margin:0;
+}
+
+h1 {font-size: 3.366em; }
+
+h2 {font-size: 2.525em;}
+
+h3 {font-size: 1.894em;}
+
+h4 {font-size: 1.421em;}
+
+h5 {font-size: 1.066em;}
+
+
+.Header{
+  background-color: var(--accent);
+  color:var(--background);
+  text-align:center;
+  padding:1em;
+}
+
+.QuestionForm{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width:70ch;
+  padding:1em;
+  margin:1em auto;
+  background-color: var(--primary);
+  color:var(--background);
+  border-radius:0.25em;
+
+  font-size:1.5em;
+
+  p{
+    font-weight: 600;
+  }
+  
+  input{
+    font-size:1em;
+    background-color: var(--background);
+    color:var(--text);
+    border-radius:0.25em;
+    
+    border:none;
+    padding:0.5em 0.75em;
+    margin-bottom:1em;
+    width:100%;
+    max-width:50ch;
+  }
+  
+  button{
+    font-size:0.75em;
+    width:20ch;
+    border-radius:0.25em;
+    background-color: var(--background);
+    color:var(--text);
+    padding:0.25em 0.5em;
+    border:0.25em solid var(--background);
+    margin:0 1em;
+    transition: all 150ms linear;
+
+    &:hover{
+      border-color: var(--primary);
+    }
+  }
+}
+
+.NewQuestionForm{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width:70ch;
+  padding:1em;
+  margin:1em auto;
+  background-color: var(--secondary);
+  color:var(--background);
+  border-radius:0.25em;
+
+  font-size:1.5em;
+
+  p{
+    font-weight: 600;
+  }
+  
+  input{
+    font-size:1em;
+    background-color: var(--background);
+    color:var(--text);
+    border-radius:0.25em;
+    
+    border:none;
+    padding:0.5em 0.75em;
+    margin-bottom:1em;
+    width:100%;
+    max-width:50ch;
+  }
+  
+  button{
+    font-size:0.75em;
+    width:20ch;
+    border-radius:0.25em;
+    background-color: var(--background);
+    color:var(--text);
+    padding:0.25em 0.5em;
+    border:0.25em solid var(--background);
+    margin:0 1em;
+    transition: all 150ms linear;
+
+    &:hover{
+      border-color: var(--primary);
+    }
+  }
+}
+
+.Results{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width:70ch;
+  padding:1em;
+  margin:1em auto;
+  background-color: var(--accent);
+  color:var(--background);
+  border-radius:0.25em;
+
+  h1{
+    margin:0 0 1em;
+  }
+  p{
+    font-size:1.5em;
+    margin:0;
+    font-weight: 600;
+  }
+
+}
